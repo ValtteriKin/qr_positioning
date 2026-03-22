@@ -40,3 +40,14 @@ h1{
 #camera{
     width: 100%;
 }
+
+#btn{
+    background-color: var(--theme);
+    border-radius: 5px;
+    transition: 2s;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: white;
+}
