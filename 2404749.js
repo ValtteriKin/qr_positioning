@@ -24,6 +24,7 @@ function startScanner(){
             showMarkerAt(place.top, place.left);
             toggleScanner();
             console.log(place);
+            console.log(typeof place.inStock);
             showInventory(place);
         }
     ).catch(function(err){
@@ -50,7 +51,7 @@ function showInventory(place){
     if (place.inStock == true){
         stockN = 1;
     }
-    stock.textContent = String("In store: " + place.inStock);
+    stock.textContent = String("In store: " + Number(place.inStock));
     price.textContent = String("Price: " + place.price + "€");
     container.appendChild(name);
     container.appendChild(stock);
