@@ -23,8 +23,6 @@ function startScanner(){
             const place = JSON.parse(text);
             showMarkerAt(place.top, place.left);
             toggleScanner();
-            console.log(place);
-            console.log(typeof place.inStock);
             showInventory(place);
         }
     ).catch(function(err){
@@ -42,16 +40,16 @@ function showMarkerAt(top, left){
 }
 
 function showInventory(place){
-    let stockN = 0;
+    let stockN = "No";
     const container = document.getElementById("pContainer");
     const name = document.createElement("p");
     const stock = document.createElement("p");
     const price = document.createElement("p");
     name.textContent = String("Item: " + place.name);
     if (place.inStock == true){
-        stockN = 1;
+        stockN = "yes";
     }
-    stock.textContent = String("In store: " + Number(place.inStock));
+    stock.textContent = String("In store: " + stockN);
     price.textContent = String("Price: " + place.price + "€");
     container.appendChild(name);
     container.appendChild(stock);

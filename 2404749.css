@@ -52,10 +52,6 @@ h1{
     background-color: white;
 }
 
-#pContainer{
-    justify-content: left;
-}
-
 p{
     border: 2px solid black;
     margin: 0px;
